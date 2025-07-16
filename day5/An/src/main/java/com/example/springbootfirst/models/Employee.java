@@ -1,7 +1,4 @@
-package com.example.SpringBotApp.model;
-
-
-
+package com.example.springbootfirst.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,16 +8,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
-@Entity
-
 @Data // Generates getters, setters, toString, equals, hashCode
 @AllArgsConstructor // Generates constructor with all fields
-@NoArgsConstructor
-public class EmployeeModel {
-    @Id //primary key
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+@NoArgsConstructor // Generates constructor with no filed
+@Entity
+public class Employee {
+    @Id // primary key
+//    @GeneratedValue(strategy = GenerationType.IDENTITY) - if you give this you should not give this field in input this will be auto generated
     private int id;
     private String name;
-    private String Job;
+    private String job;
 }

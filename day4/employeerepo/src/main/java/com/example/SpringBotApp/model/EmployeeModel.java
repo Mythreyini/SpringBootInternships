@@ -12,15 +12,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-@Entity
-
 @Data // Generates getters, setters, toString, equals, hashCode
 @AllArgsConstructor // Generates constructor with all fields
 @NoArgsConstructor
+@Entity
 public class EmployeeModel {
-    @Id //primary key
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+
+
     private int id;
     private String name;
-    private String Job;
+    private String job;
+
 }
